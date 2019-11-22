@@ -63,13 +63,6 @@
     "num_serialized_models_to_keep": 3,
     "num_epochs": std.parseInt(std.extVar("NUM_EPOCHS")),
     "should_log_learning_rate": true,
-//    NOTE:  According to AllenNLP docs, slanted_triangular doesnt make much sense w/ high num epochs & early stopping
-//    "learning_rate_scheduler": {
-//      "type": "slanted_triangular",
-//      "num_epochs": std.parseInt(std.extVar("NUM_EPOCHS")),
-//      "num_steps_per_epoch": std.parseInt(std.extVar("DATASET_SIZE")) / std.parseInt(std.extVar("GRAD_ACCUM_BATCH_SIZE"))
-//    },
-    "gradient_accumulation_batch_size": std.parseInt(std.extVar("GRAD_ACCUM_BATCH_SIZE")),
     "patience": 10,
     "cuda_device": std.parseInt(std.extVar("CUDA_DEVICE"))
   }
